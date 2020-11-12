@@ -32,7 +32,7 @@ export default ({ app, account, toggleMenu, signOut }) => (
       <Col xs={0} sm={6} style={{ textAlign: 'right' }}>
         <Dropdown.Button
           overlay={menu(account, signOut)}
-          icon={<Icon type="user"/>}
+          icon={<Icon type="user" />}
           trigger={['click']}
         >
           {account.username}

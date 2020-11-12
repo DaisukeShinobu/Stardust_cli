@@ -54,7 +54,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProfile: () => dispatch(fetchCurrentAccount()),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MemberPageFrame)
+export default connect(mapStateToProps, mapDispatchToProps)(MemberPageFrame)
