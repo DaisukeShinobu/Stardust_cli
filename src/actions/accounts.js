@@ -1,9 +1,5 @@
 import { notification } from 'antd'
-import {
-  getMyAccount,
-  patchMyAccount,
-  setAuthHeader,
-} from '../services/v1ApiRequest'
+import { getMyAccount, patchMyAccount, setAuthHeader } from '../services/v1ApiRequest'
 import { postSignIn, postSignUp } from '../services/authApiRequest'
 import {
   SET_ACCOUNT,
@@ -39,7 +35,6 @@ export const fetchCurrentAccount = () => dispatch => {
       dispatch({ type: STOP_LOADING })
     })
 }
-
 
 export const signUp = formProps => dispatch => {
   dispatch({ type: START_LOADING })
@@ -82,7 +77,6 @@ export const signIn = formProps => dispatch => {
       dispatch({ type: STOP_LOADING })
     })
 }
-
 
 const setAccount = user => ({
   type: SET_ACCOUNT,

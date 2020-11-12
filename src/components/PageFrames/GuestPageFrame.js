@@ -28,7 +28,4 @@ const mapDispatchToProps = dispatch => ({
   signOut: () => dispatch(selfSignOut()),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(GuestPageFrame)
+export default connect(mapStateToProps, mapDispatchToProps)(GuestPageFrame)

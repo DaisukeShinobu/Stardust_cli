@@ -18,8 +18,9 @@ class MyPage extends Component {
           <div className={style.sectionInnerWrap}>
             <h1>マイページ</h1>
             <div className={style.profileTable}>
-              {isLoading ?
-                <Spin size="large" /> :
+              {isLoading ? (
+                <Spin size="large" />
+              ) : (
                 Object.keys(account).map((key, idx) => (
                   <Row type="flex" key={idx}>
                     <Col xs={24} md={10}>
@@ -29,7 +30,8 @@ class MyPage extends Component {
                       <div className={style.profileValue}>{account[key].value}</div>
                     </Col>
                   </Row>
-                ))}
+                ))
+              )}
             </div>
           </div>
         </section>
@@ -47,7 +49,4 @@ const mapDispatchToProps = dispatch => ({
   setPageTitle: pageTitle => dispatch(setPageTitle(pageTitle)),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withRouter(MyPage))
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(MyPage))

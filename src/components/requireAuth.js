@@ -36,8 +36,5 @@ export default ComposedComponent => {
     fetchCurrentAccount: () => dispatch(fetchCurrentAccount()),
   })
 
-  return connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Auth)
+  return connect(mapStateToProps, mapDispatchToProps)(Auth)
 }

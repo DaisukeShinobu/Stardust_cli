@@ -30,7 +30,4 @@ const mapDispatchToProps = dispatch => ({
   setPageTitle: pageTitle => dispatch(setPageTitle(pageTitle)),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withRouter(TopPage))
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(TopPage))

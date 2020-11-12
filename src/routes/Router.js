@@ -10,7 +10,6 @@ import SignUpPage from '../containers/SignUpPage'
 import HomePage from '../containers/HomePage'
 import MyPage from '../containers/MyPage'
 
-
 export default ({ history }) => (
   <ConnectedRouter history={history}>
     <Switch>
@@ -18,7 +17,7 @@ export default ({ history }) => (
       <Route exact path={routes.signIn()} render={withGuestLayout(SignInPage)} />
       <Route exact path={routes.signUp()} render={withGuestLayout(SignUpPage)} />
 
-      <Route exact path={routes.home()} render={withMemberLayout(requireAuth(HomePage))}/>
+      <Route exact path={routes.home()} render={withMemberLayout(requireAuth(HomePage))} />
       <Route exact path={routes.myPage()} render={withMemberLayout(requireAuth(MyPage))} />
     </Switch>
   </ConnectedRouter>

@@ -21,9 +21,7 @@ export default class SideBar extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     const pageUrl = window.location.href
     if (pageUrl !== this.state.currentUrl) {
-      const menuItems = [...mainMenuItemList].filter(
-        menuItem => pageUrl.includes(menuItem.link)
-      )
+      const menuItems = [...mainMenuItemList].filter(menuItem => pageUrl.includes(menuItem.link))
       this.setState({ currentUrl: pageUrl, selectedKeys: menuItems.map(menuItem => menuItem.name) })
     }
   }
